@@ -16,7 +16,7 @@ export default function Form() {
                 <span>Ingresar para administrar el sistema</span>
                 <form id='form' className='flex flex-log' onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" {...register("username")} placeholder='Usuario'/>
-                    <input type="text" {...register("password")} placeholder='Contraseña'/>
+                    <input type="password" {...register("password")} placeholder='Contraseña'/>
                     <input type="text" {...register("mobile", { required : true, maxLength: 10 })} placeholder='Identificador'/>
                     {errors.mobile?.type === "required" && "Mobile Number is required"}
                     {errors.mobile?.type === "maxLength" && "Max Length Exceed"}
